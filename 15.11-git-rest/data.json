@@ -5,7 +5,7 @@ GET - posts/2
 POST - posts/ CREATE
 PUT - posts/1 EDIT THE ALL OBJECT
 PATCH - posts/1 EDIT SPECIFIC KEY
-DELETE - posts/1
+DELETE - posts/1 DELETE THIS POST.
 
 [
     {
