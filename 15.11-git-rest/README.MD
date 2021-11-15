@@ -7,6 +7,7 @@
 # REST
 ## Rest is Representational State Transfer
 
+
 # Requests type:
 # GET, POST, PUT, PATCH, DELETE.
 
