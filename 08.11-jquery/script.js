@@ -38,13 +38,14 @@ function updateContact(id, name, phone, updateButton) {
             updateUIContact(contact);
         }
     })
-    function updateUIContact(contact) {
-        console.log(updateButton);
-        contact.name = name;
-        contact.phone = phone;
-        $(`[data-contact-id=${id}][data-role="contact-name"]`).text(name);
-        $(`[data-contact-id=${id}][data-role="contact-phone"]`).text(phone);
-    }
+    localStorage.setItem('contacts', JSON.stringify(contacts));
+}
+function updateUIContact(contact) {
+    console.log(updateButton);
+    contact.name = name;
+    contact.phone = phone;
+    $(`[data-contact-id=${id}][data-role="contact-name"]`).text(name);
+    $(`[data-contact-id=${id}][data-role="contact-phone"]`).text(phone);
 }
 $("[data-role=add-contact-btn]").click(function () {
     const name = $("[data-role=userName]").val(), phone = $("[data-role=phone]").val();
