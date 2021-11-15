@@ -8,7 +8,7 @@ https://git-scm.com/download/win
 
 **Remeber to check this checkbox in the instllation:**
 
-![Alt text](gitwin.jpeg?raw=true "Git checkbox")
+![Alt text](/images/6KElW.png?raw=true "Git checkbox")
 
 ## Mac:
 There are several ways to install Git on a Mac. The easiest is probably to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time.
