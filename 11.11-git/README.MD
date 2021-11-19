@@ -1,6 +1,7 @@
 # GIT
 * git was invented ny the linux founder in order to managed linux versions.
 * git commands:
+## git clone - cloning a repo from remote (like github, bitbucket etc..).
 ## git init - initlizing this folder as a git repo.
 ## git status - display the status of the git repo.
 ### Red file - file that we not added. 
