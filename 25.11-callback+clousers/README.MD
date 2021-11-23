@@ -1,4 +1,5 @@
  - Pass functions as a param.
  - Return function as a return statment.
  - Clousers. global, functions, function that returns functions that need the parant functions params.
- - 
+ - Run JS from command line.
+ - Go in to node in the command line.
