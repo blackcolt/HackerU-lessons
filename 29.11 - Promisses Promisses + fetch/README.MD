@@ -1,8 +1,8 @@
  - fetch api.
+  - Try catch.
  - Promise resolve reject catch.
  - async await.
  - Corss.
-
 
 
 
