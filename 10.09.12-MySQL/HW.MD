@@ -16,6 +16,7 @@ MYSQL HOMEWORKS
   
 * Grades[
     id, int
+    grade, int
     studend.id, (connected to students (id) as a forign key) int
     lesson.id (connected to lessons (id) as a forign key) int
 * ]
