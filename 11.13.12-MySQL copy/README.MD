@@ -1,4 +1,5 @@
  - Connect mysql via vscode.
+ - .SQL file.
  - CREATE, DROP, ALTER, SHOW
  - AND OR 
  - WHERE IN
