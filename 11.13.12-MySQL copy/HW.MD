@@ -45,5 +45,6 @@ Add 4 tables:
 
 please define the fields with the right datatyps
 please create the connections between this tables.
+TRY to join the order clients table with the order table (you have a refrence in the join.SQL file).
 
-
+Good luck.
