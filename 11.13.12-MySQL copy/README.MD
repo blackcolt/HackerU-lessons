@@ -4,8 +4,7 @@
  - AND OR 
  - WHERE IN
  - Two keys as uniqe.
- - Join
  - field AS
+ - Join
  - Connect mysql via command line
-    cd c:\xampp\mysql\bin
-    mysql.exe -u root --root
+    cd c:\xampp\mysql\bin mysql.exe -u root --root
