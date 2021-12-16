@@ -8,7 +8,7 @@ Add at least 10 orders (with 1-3 order products )
 Add 4 tables:
     `clients`
     `orders`
-    `order_details`
+    `order_products`
     `products` 
 
  - products: (
@@ -26,15 +26,16 @@ Add 4 tables:
      email,
      phone,
      adress,
+     VIP,
  )
 
  - orders: (
     id,
     date,
     price,
-    isGift
+    is_gift
     client_id,
-    isSuplied,
+    is_suplied,
  )
 
 - order_products: (
@@ -48,3 +49,28 @@ please create the connections between this tables.
 TRY to join the order clients table with the order table (you have a refrence in the join.SQL file).
 
 Good luck.
+
+clients [idan, yarin, matan, sonia]
+orders:
+    client_id->client.id
+ [order1, order2]
+products : [bikes, phones]
+order_products: 
+id
+products_id->product.id
+order_id->order.id
+
+
+
+orders:
+id: 1
+
+order_products:[
+    id:1
+    order_id:1
+    product_id: 5,
+   
+    id:2
+    order_id:1
+    product_id: 3
+]
