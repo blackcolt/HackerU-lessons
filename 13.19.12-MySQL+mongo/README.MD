@@ -1,4 +1,4 @@
- - Description: Code formatter using prettier
+ - Code formatter using prettier
  - Export DB to CSV or other file formats.
  - Rename table - SELECT a.price from table a
  - JOIN (no inner Cartesian multiply)
