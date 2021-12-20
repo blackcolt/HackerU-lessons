@@ -1,3 +1,6 @@
+ - mongo compose.
  - Mongo -> JS behind the scenes.
  - mongo rename collection.
+ - find
+ - $or opratores
  - CRUD
