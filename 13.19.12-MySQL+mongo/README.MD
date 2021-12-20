@@ -8,6 +8,7 @@
  change PATH
  (define code for vs code)
  when its loads
+ hashing vs encryption
  (start in mac: mongod mongo)
  start->edit enviromant ->enviormant variable -> path -> new - put folder. (reload CMD)
  collection->document->fields
