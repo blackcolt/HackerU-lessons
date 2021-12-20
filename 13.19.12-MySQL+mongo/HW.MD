@@ -1,4 +1,4 @@
-Please export you MySQL 
+Please export  MySQL DB to csv and import it to google sheet. (send me link)
 
 To start mongo:
 - Mongod (to start the deamon)
