@@ -14,3 +14,11 @@ https://git-scm.com/download/win
 There are several ways to install Git on a Mac. The easiest is probably to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time.
 
 Done.
+
+# Needed progrems: 
+- VSCODE 
+- MONGO
+- XAMPP.
+- Node js + NPM
+
+VSCODE EXTENSIONS:

@@ -9,7 +9,7 @@
  - Types:
  Can we type two types in one fields (age can be a number and a string in diffrent objects?)
  ISODate (date in JS)
- write functions in the mongo shell.
+ - write functions in the mongo shell (ObjectId, IOSDate, etc).
  Do it in the compooe.
  why a part od the ID is the same (p_id)
  > for (var i = 1; i <= 25; i++) {
@@ -18,3 +18,4 @@ in mongo.
  cluster
     Bonus:
     - Connect to mysql using node js.
+    projection
