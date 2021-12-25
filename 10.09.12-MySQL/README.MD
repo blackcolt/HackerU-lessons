@@ -1,0 +1,6 @@
+ - Basic CRUD. (create read update delete)
+ - Create database|table with code.
+ - Export\import
+ - Asc|desc
+ - like statment.
+ - SQL functions (count|min|max)
