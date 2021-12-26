@@ -33,4 +33,3 @@ git history
 live server
 prettier or beutifuy
 visual studio intellicode
-nimrod
