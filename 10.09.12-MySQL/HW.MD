@@ -36,5 +36,6 @@ Queries
  - Get the last student that insrted into students table.
  - Get the oldest studtnd. (there is a date) (MID)
 ** - Get the name of the student that got the highst score. (HARD) **
+SELECT * FROM students WHERE id=(SELECT `student.id` FROM grades GROUP BY `student.id` ORDER BY AVG(grade) DESC LIMIT 1)
 
 All homeworks shold be upload as a readme file to github and send on Whatsapp\email (idanmagled@gmail.com)
