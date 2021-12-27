@@ -6,7 +6,6 @@ var con = mysql.createConnection({
   password: "root"
 });
 
-
 con.connect(function(err) {
     if (err) throw err;
     con.query('SELECT * FROM school.grades', function (err, result) {
