@@ -1,8 +1,0 @@
- - mongo compose.
- - Connect to mongo using connection string (mongodb://localhost:27017)
- - Mongo -> JS behind the scenes.
- - mongo rename collection.
- - Drop db\collection
- - find
- - $or opratores
- - CRUD
