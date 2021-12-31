@@ -1,0 +1,1 @@
+give us homework from the start to the begining of the class then we can practice evry think that we learn
