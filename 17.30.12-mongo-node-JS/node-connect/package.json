@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "mongodb": "^4.2.2",
-    "mysql":"^2.18.1"
+    "mysql":"^2.18.1",
+    "is-odd": "3.0.1"  
   }
 }
