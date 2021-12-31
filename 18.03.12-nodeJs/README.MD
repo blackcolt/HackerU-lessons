@@ -1,0 +1,15 @@
+ - Node js intro.
+ - what is NPM - and why we have it.
+ - Versioning meaning - 1(major).0(minor).0(patch)
+ - peer depencdencies
+ - node . === main in package json.
+ - MIT licence.
+ - Dev depencies vs depencies.
+ - What is a server.
+ - LIBUV - C++ (IO - INPUT OUTPUT)
+ - Diffrent between server and client.
+ - Recap ports.
+ - shard hosting vs managed. (hostgator, digitalocen, aws, google etc..) cost
+ - linux vs windows vs mac os.
+ - Ram vs hardisk.
+ - JS - blocking code while (9999999) - can't do other stuff.
