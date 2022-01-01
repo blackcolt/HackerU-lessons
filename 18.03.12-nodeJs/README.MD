@@ -1,5 +1,7 @@
  - Node js intro.
  - what is NPM - and why we have it.
+ - Npm i vs npm u
+ - NPX.
  - Versioning meaning - 1(major).0(minor).0(patch)
  - peer depencdencies
  - node . === main in package json.
