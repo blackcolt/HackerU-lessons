@@ -54,6 +54,8 @@ Plase write all the data to another JSON file called user-parsed.json (in the re
 
 using the mongodb insert the users to the node-db we created and the last HW
 https://www.npmjs.com/package/mongodb
+(try to take the the mongo user from an env variable)
+
 
 Don't forget to start you mongod
 
