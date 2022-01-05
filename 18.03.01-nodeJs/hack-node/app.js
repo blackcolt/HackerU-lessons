@@ -2,7 +2,7 @@ const fs = require('fs-extra')
 const mosheTheValidator = require('validator');
 const _ = require('lodash')
 const { MongoClient } = require('mongodb');
-const uri = "mongodb://192.168.1.142";
+const uri = "mongodb://127.0.0.1:27017";
 const client = new MongoClient(uri);
 
 async function main(obj) {
@@ -17,12 +17,13 @@ async function main(obj) {
     console.log(insertResult)
     // client.db('node-db').collection('users').insertMany([obj])
   }
-// main(obj)
-
-const obj =  { 
+  const obj =  { 
     name: { first_name: "idan", last_name: "magled" },
     email: "idanmagledgmail.com", age: 35 
 } 
+main(obj)
+
+
 const user = process.env.db_pass
 process.env
 console.log(_.get(obj, 'name.last_name', 'bla bla'));
