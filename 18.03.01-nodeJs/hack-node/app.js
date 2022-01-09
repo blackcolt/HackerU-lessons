@@ -5,24 +5,29 @@ const { MongoClient } = require('mongodb');
 const uri = "mongodb://127.0.0.1:27017";
 const client = new MongoClient(uri);
 
+const obj =  { 
+  name: { first_name: "idan", last_name: "magled" },
+  email: "idanmagledgmail.com", age: 35 
+} 
+
 async function main(obj) {
-    await client.connect();
+    client.connect();
     console.log('Connected successfully to server');
     //use node-db
     const db = client.db('node-db');
     //db.createCollection('users')
     const collection = db.collection('users');
     //db.users
-    const insertResult = await collection.insertMany([obj]);
-    console.log(insertResult)
+    return await collection.insertMany([obj]);
+    // client.close();
     // client.db('node-db').collection('users').insertMany([obj])
   }
-  const obj =  { 
-    name: { first_name: "idan", last_name: "magled" },
-    email: "idanmagledgmail.com", age: 35 
-} 
-main(obj)
 
+  (async function() {
+    let x = await main(obj)
+    console.log(x)
+    client.close()
+  })();
 
 const user = process.env.db_pass
 process.env
@@ -35,7 +40,7 @@ if (!mosheTheValidator.isEmail(obj.email)){
 }
 
 async function example () {
-    await fs.writeJson('results/awit_names.json', obj)
+    // await fs.writeJson('results/awit_names.json', obj)
 }
 
 //

@@ -2,7 +2,8 @@ Please create a new node project.
 Create a json file (called users.json) (put it in folder called resources)
 
 Fill the file with random users (arry of json objects (something like 15))
-Example = [
+Example = 
+[
     {
         user_name: "idan",
         password: "1234",
