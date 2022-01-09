@@ -1,3 +1,4 @@
+
  - How node resolve modules (order - node -> node_module).
  - How to create our own module. (module.export)
  * Prectice -> Create you own file called dollarConverter.js
@@ -8,5 +9,9 @@
  call the function `dollarify()` is its working?
  call the append string is it working -> Private funciton.
  - import only one some functions from module even if you export it.
-
+ - shard hosting vs managed. (hostgator, digitalocen, aws, google etc..) cost
+ - linux vs windows vs mac os.
+ - Deploy my server on arm-64
+ - Why is localhost is the IP of the server.
+ 
 let start EXPRESS!!!!
