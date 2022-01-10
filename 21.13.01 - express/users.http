@@ -1,0 +1,8 @@
+GET http://localhost:3000/users
+###
+POST http://localhost:3000/users 
+content-type: application/json
+
+{
+    "name": "sample",
+}
