@@ -1,6 +1,6 @@
 Create a new node js project called (eged)
 create a index\app(.js)
-int the above file, Create a server (with http server).
+in the above file, Create a server (with http server).
 Create another file called (bus-time.js) (in the same project)
 Create a json file with an array of objects (call is but-times.json)
 example:
@@ -33,4 +33,4 @@ in the bus-time.js create a function called `getClosetTime` thats get a kev numb
  - If there is an answer from the `getClosetTime` return 200.
  
 
-
+**For the next lesson please create mongo DB called `reminders` and inside add 4 reminders**

@@ -8,10 +8,10 @@
  in the index.js require the file you wrote './fileName' 
  call the function `dollarify()` is its working?
  call the append string is it working -> Private funciton.
+ - Why is localhost is the IP of the server.
  - import only one some functions from module even if you export it.
  - shard hosting vs managed. (hostgator, digitalocen, aws, google etc..) cost
  - linux vs windows vs mac os.
  - Deploy my server on arm-64
- - Why is localhost is the IP of the server.
  
 let start EXPRESS!!!!
