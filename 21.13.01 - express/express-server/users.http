@@ -1,0 +1,8 @@
+GET http://localhost:3000/reminders
+###
+POST http://localhost:3000/reminders 
+content-type: application/json
+
+{
+    "name": "sample"
+}
