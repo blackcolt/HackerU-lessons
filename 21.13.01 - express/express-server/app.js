@@ -11,8 +11,12 @@ app.listen(3000, () =>{
     console.info("App listning in port 3000")
 })
 // process.count = 0;
-app.use(()=>{
+app.use((req, res, next)=>{
     console.log("this will always happens")
+    next()
+}, (req, res, next)=>{
+    console.log("this will always happens2222")
+    next()
 })
 
 app.get('/home', (req, res, next)=>{
