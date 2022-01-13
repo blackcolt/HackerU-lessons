@@ -1,5 +1,6 @@
 Solve HW.
 Debug session.
+nodemon (npx vs npm)
 
 express basic 
 app.get()
