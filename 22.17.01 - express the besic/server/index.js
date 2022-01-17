@@ -4,6 +4,10 @@ const port = 3000
 
 app.use(express.static('public'))
 app.use(express.urlencoded()); 
+app.use((res, req, next)=>{
+    console.log("im here!!")
+    next()
+}); 
 
 //HW COOKBOOK
 //names.json -> [
@@ -16,7 +20,7 @@ app.use(express.urlencoded());
 // })
 
 
-app.get('/', (req, res) => {
+app.get('/idan', (req, res) => {
   res.send('Hello World!')
 })
 
