@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" data-role="name" placeholder="Name here" />
+    <input type="tel" data-role="phone" placeholder="Phone" />
+
+    <button data-role="save-button">
+        Save
+    </button>
+    <h1>My contacts</h1>
+   <ol data-role="contacts-list">
+
+   </ol>
+</body>
+<script>
+    $(function () {
+        function getAllContacts(){
+            $.get('/contacts', function (contacts){
+                $('[data-role="contacts-list"]').html('');
+                contacts.forEach(contact => {
+                    $('[data-role="contacts-list"]').append(`<li>${contact.name},${contact.phone} </li>`)
+               });
+            })
+        }
+        // getAllContacts();
+        $('[data-role="save-button"]').click(function () {
+            let name = $('[data-role="name"]').val();
+            let phone = $('[data-role="phone"]').val();
+            $.post('/contacts',{name, phone}, function (data) {
+                getAllContacts();
+                // $(".result").html(data);
+            });
+        })
+    })
+    // $.post function(url, data, cb)
+</script>
+
+</html>
