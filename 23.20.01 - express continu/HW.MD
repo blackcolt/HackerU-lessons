@@ -3,35 +3,40 @@ Add express, nodemon add the needded scripts for starting (dev, start etc.)
 
 Create new node project.
 create node server `express`
-create 2 *post* routes (app.post('contact-us')) (app.post('reminders'))
-Create a public folder to hold your html files.
-To the public folder add `index.html`, `contact.html`, `reminders.html` files.
-in the `index,html` add 2 links, one to `contect.html`, and one for `reminders.html` (a href)
-Serve those file ith app.use(static) //express.static
 
-In the `contact.html` create 3 input (name, email phone)
-Create a button (contact us)
-On button click get the values from the inputs and send them to the server.
-hiny $.post('contact-us') (fill the rest.)
+start the serever **ONLY** if the DB connected.
 
-in the `contact-us` route:
-catch this data from the req.body
-(hint, you need to use app.use() - app.use(express.urlencoded({ extended: true })))
-wirte this data to the DB.
+with mongoose create 2 models - student, grades
+Student needs to have name:string, grade:number, age:number 
+all of those fields are required (mongoose validation)
+Grade needs to have student_id: string, grade: number
 
-In the `reminders.html` create 1 input (reminder)
-Create a button (reminde-me)
-On button click get the value from the input and send it to the server.
-hiny $.post('reminders') (fill the rest.)
+Add route for adding a new students to the DB (app.get)
+Add route to get student by name.
+Add route for getting all studetns.
+Add route to add grade for a user 
+Add route to delete stduend by name
+Add route to delete stduend by id.
 
-in the `reminders` route:
-catch this data from the req.body
-(hint, you need to use app.use() - app.use(express.urlencoded({ extended: true })))
-wirte this data to the DB.
+Use all of this routes in the index.html page.
 
+use the get all student with `fetch`
+use the get student by name with `$.get`
+use the get student by name with `$.get`
+use the get student by name with `fetch`
+Add route to delete stduend by name `fetch`
+Add route to delete stduend by id: `$.ajax -` (you have an explaination how to do it here)
 
-Bonus:
-(we want over it at the end of the lesson)
+https://stackoverflow.com/questions/2153917/how-to-send-a-put-delete-request-in-jquery/2153931
+
+Add a route that show our top grade. `fetch`
+
+To the public folder add `index.html`,
+
+Add a readme.md file to your project and explain to the next developer all the commands and depencies you installed and what it does.
+Add to it each response from the preview from the network tab.
+
+Bonus: (this is the same bonus from before, none of you did it so im adding it again :) )
 Create a middlewere that write down each incomming request to the server in a json file (each request as a json object)
 Hint(app.use())
 
