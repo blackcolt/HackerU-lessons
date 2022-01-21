@@ -1,11 +1,22 @@
-globaks __dirname
-
+globakl __dirname
+middlwere
+$.ajax
+process.exit();
+process.env in the terminal ENV=prod node start
 console.time()
 res.download()
 console.timeEnd();
 res.redirect()
 cascading routes.
+app.get(/contacts/:id) (the nekodotiam )
+forever.
+promises,סינכרוני ואסינכרוני
 
+axios
+
+https://prettier.io/docs/en/install.html
+
+mongoose required: error message insted of true.
 
 router.js (by subject)
 
