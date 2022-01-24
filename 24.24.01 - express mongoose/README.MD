@@ -9,6 +9,10 @@ console.timeEnd();
 res.redirect()
 cascading routes.
 app.get(/contacts/:id) (the nekodotiam )
+mongoose
+{
+    timestamps:true
+}
 forever.
 promises,סינכרוני ואסינכרוני
 
