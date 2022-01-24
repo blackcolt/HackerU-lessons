@@ -1,8 +1,10 @@
-globakl __dirname
-middlwere
-$.ajax
-process.exit();
+global \_\_dirname
 process.env in the terminal ENV=prod node start
+process.exit();
+
+middlwere
+
+$.ajax
 console.time()
 res.download()
 console.timeEnd();
@@ -11,7 +13,7 @@ cascading routes.
 app.get(/contacts/:id) (the nekodotiam )
 mongoose
 {
-    timestamps:true
+timestamps:true
 }
 forever.
 promises,סינכרוני ואסינכרוני
@@ -26,7 +28,7 @@ router.js (by subject)
 
 Contents of ./app.js:
 var express = require('express'),
-    app = express();
+app = express();
 var testRoutes = require('./routes/tests');
 
 // Import my test routes into the path '/test'
@@ -35,28 +37,27 @@ app.use('/tests', testRoutes);
 Contents of ./routes/tests.js:
 
 var express = require('express'),
-    router = express.Router();
+router = express.Router();
 
 var automatedRoutes = require('./testRoutes/automated');
 
 router
-  // Add a binding to handle '/tests'
-  .get('/', function(){
-    // render the /tests view
-  })
-
+// Add a binding to handle '/tests'
+.get('/', function(){
+// render the /tests view
+})
 
 the `next` param in a request.
 //use middlewere
 app.use(function (req, res, next) {
-  console.log('Time:', Date.now())
-  next()
+console.log('Time:', Date.now())
+next()
 })
 
 template engin.
 
 const express = require('express'),
-      router = express.Router();
+router = express.Router();
 
 //exporting thee router to other modules
 module.exports = router;
