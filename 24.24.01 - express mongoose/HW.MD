@@ -38,6 +38,8 @@ Add UI for getting all users.
 Add UI for getting store by id (fetch)
 Add UI for getting store by name (fetch)
 
+With your teammate (in live share), add another route (lets call it helth-check) thats returns json 
+{"message": "im good!"} commit it, and add the commit to the repo.
 
 Bonus:
 Add an add an ajax request from the orders.html thats get all the stores and make a select tag from tham
