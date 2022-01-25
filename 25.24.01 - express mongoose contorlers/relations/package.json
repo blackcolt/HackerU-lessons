@@ -1,0 +1,23 @@
+{
+  "name": "relations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "forever": "4.0.2",
+    "express": "4.17.2",
+    "mongoose": "6.1.7"
+  },
+  "devDependencies": {
+    "prettier": "2.5.1",
+    "nodemon": "2.0.15"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
