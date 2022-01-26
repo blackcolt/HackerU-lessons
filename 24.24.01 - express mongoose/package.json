@@ -1,0 +1,12 @@
+{
+  "name": "24.24.01---express-mongoose",
+  "version": "1.0.0",
+  "description": "global __dirname middlwere $.ajax process.exit(); process.env in the terminal ENV=prod node start console.time() res.download() console.timeEnd(); res.redirect() cascading routes. app.get(/contacts/:id) (the nekodotiam ) mongoose {     timestamps:true } forever. promises,סינכרוני ואסינכרוני",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

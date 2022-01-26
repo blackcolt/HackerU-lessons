@@ -1,8 +1,4 @@
-global \_\_dirname
-process.env in the terminal ENV=prod node start
-process.exit();
-
-middlwere
+lets talk about controllers.
 
 $.ajax
 console.time()
@@ -10,7 +6,6 @@ res.download()
 console.timeEnd();
 res.redirect()
 cascading routes.
-app.get(/contacts/:id) (the nekodotiam )
 mongoose
 {
 timestamps:true
