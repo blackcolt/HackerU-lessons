@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order manager</title>
+</head>
+<body dir="rtl">
+    <label>לקוח
+    <select data-role="client">
+        <option disabled="disabled" >loading data</option>
+    </select>
+</label>
+<label>חנות
+    <select data-role="store">
+        <option disabled="disabled" >loading data</option>
+    </select>
+</label>
+<input type="text" placeholder="הזמנה"/>
+<button data-role="send-order"></button>
+</body>
+<script>
+    $(function() {
+        // $("[data-role=store]")
+        // $("[data-role=client]")
+        $("[data-role=send-order]").click(()=>{
+            console.log(this)
+        });
+    });
+</script>
+</html>
