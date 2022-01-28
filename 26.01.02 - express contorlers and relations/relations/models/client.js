@@ -18,4 +18,4 @@ const ClientSchema = new mongoose.Schema(
   { timestamps: true }
 );
 ClientSchema.methods.testFunc = function testFunc(params) {};
-module.exports = mongoose.model("Client", ClientSchema);
+module.exports = mongoose.model("client", ClientSchema);

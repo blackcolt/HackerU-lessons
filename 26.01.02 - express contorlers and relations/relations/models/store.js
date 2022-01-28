@@ -17,4 +17,4 @@ const StoreSchema = new mongoose.Schema(
   { timestamps: true }
 );
 StoreSchema.methods.testFunc = function testFunc(params) {};
-module.exports = mongoose.model("Store", StoreSchema);
+module.exports = mongoose.model("store", StoreSchema);

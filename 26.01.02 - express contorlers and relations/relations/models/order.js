@@ -19,4 +19,4 @@ const OrderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 OrderSchema.methods.testFunc = function testFunc(params) {};
-module.exports = mongoose.model("Order", OrderSchema);
+module.exports = mongoose.model("order", OrderSchema);

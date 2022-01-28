@@ -15,17 +15,17 @@ app.get("/orders", (req, res) => {
 app.get("/getAllClients", (req, res) => {
   getAllClients()
     .then((clients) => res.json({ clients }))
-    .catch((err) => res.json(error));
+    .catch((err) => res.json(err));
 });
 
 app.get("/getAllStores", (req, res) => {
   getAllStores()
     .then((stores) => res.json({ stores }))
-    .catch((err) => res.json(error));
+    .catch((err) => res.json(err));
 });
 
 mongoose
-  .connect("mongodb://0.0.0.0:27017")
+  .connect("mongodb://0.0.0.0:27017/ten-wolt")
   .then(() => {
     app.listen(port, () => {
       console.info(`start server start listening on port ${port}`);

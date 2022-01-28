@@ -3,7 +3,7 @@ const getAllClients = () => {
   return new Promise((resolve, reject) => {
     Client.find()
       .then((client) => resolve(client))
-      .then((err) => reject(err));
+      .catch((err) => reject(err));
   });
 };
 
