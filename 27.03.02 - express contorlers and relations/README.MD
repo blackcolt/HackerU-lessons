@@ -1,6 +1,3 @@
-relation
-lets build the add order page.
-$.ajax
 res.download()
 res.redirect()
 cascading routes.
