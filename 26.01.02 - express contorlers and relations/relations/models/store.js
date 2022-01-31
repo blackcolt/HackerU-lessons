@@ -16,5 +16,6 @@ const StoreSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+StoreSchema.plugin(require("mongoose-autopopulate"));
 StoreSchema.methods.testFunc = function testFunc(params) {};
 module.exports = mongoose.model("store", StoreSchema);

@@ -13,9 +13,14 @@ const ClientSchema = new mongoose.Schema(
       type: String,
       default: false,
     },
+    phone: {
+      type: String,
+      default: false,
+    },
   },
 
   { timestamps: true }
 );
 ClientSchema.methods.testFunc = function testFunc(params) {};
+ClientSchema.plugin(require("mongoose-autopopulate"));
 module.exports = mongoose.model("client", ClientSchema);

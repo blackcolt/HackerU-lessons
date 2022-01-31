@@ -5,11 +5,13 @@ const OrderSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: "client",
       required: "יש להזין מזהה לקוח",
+      autopopulate: true,
     },
     store: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "store",
       required: "יש להזין מזהה חנות",
+      autopopulate: true,
     },
     orderText: {
       type: String,
@@ -19,4 +21,5 @@ const OrderSchema = new mongoose.Schema(
   { timestamps: true }
 );
 OrderSchema.methods.testFunc = function testFunc(params) {};
+OrderSchema.plugin(require("mongoose-autopopulate"));
 module.exports = mongoose.model("order", OrderSchema);

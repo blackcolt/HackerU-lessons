@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order manager</title>
+</head>
+<body dir="rtl">
+    <div data-role="client-fields">
+        <label>לקוח
+            <select data-role="client">
+                <option disabled="disabled" >loading data</option>
+            </select>
+        </label>
+        <label>שם
+            <input placeholder="שם" type="text" name="name"/> 
+        </label>
+        <label>טלפון
+            <input placeholder="טלפון" type="tel" name="phone"/> 
+        </label>
+        <label>כתובת
+            <input placeholder="כתובת" type="text" name="address"/> 
+        </label>
+        <label>
+            <input placeholder="איש חשוב מאוד" type="checkbox" name="isVip"/>
+            is vip
+        </label>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<button data-role="update-client">UPDATE CLIENT</button>
+
+</ul>
+</body>
+<script>
+    $(function() {
+        $('[data-role=update-client]').click(()=>{
+          const clientString = createClient();
+          updateClient(clientString, $('[data-role="client"]').val(), function (message) {alert(message)})
+        })
+
+        function createClient(){
+            let client = '';
+            const inputs = $('[data-role="client-fields"] input');
+            $.each(inputs, (_, input)=>{
+                const name = $(input).attr('name');
+                client+=`${name}=${$(input).attr('type') === 'checkbox' ? $(input).is(":checked") : $(input).val()}&`
+            })
+            return client;
+        }
+        function updateClient(clientString, id, cb){
+            $.ajax({
+                    method: "PUT",
+                    url: `/client/${id}`,
+                    data: clientString
+                }).done(function( msg ) {
+                    cb(msg)
+                });
+        }
+
+        $('[data-role="client"]').change(function(){
+            console.log($(this).val());
+            fetch(`/client/${$(this).val()}`)
+            .then(client=>client.json())
+            .then(client=>populateClient(client))
+        })
+
+        function populateClient(client){
+            $.each(client, (key, value)=>{
+                const element = $(`[name="${key}"]`);
+                element.attr('type') === 'checkbox' ? element.prop( "checked", value == 'true') : element.val(value)
+            });
+        }
+
+
+        $.get('/getAllClients',(response)=>{
+           const select = $('[data-role="client"]');
+           populateOptions(select, response.clients);
+        })
+
+        function populateOptions(selectElement, itratable){
+            selectElement.html('');
+            $.each(itratable, function(_ ,itrate){
+                const option = $('<option>');
+                option.text(itrate.name);
+                option.attr('value', itrate._id);
+                selectElement.append(option);
+            })
+        }
+    });
+</script>
+</html>
