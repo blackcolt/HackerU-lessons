@@ -1,6 +1,9 @@
+mvc recap
+
 res.download()
 res.redirect()
-cascading routes.
+cascading routes (next params)
+
 axios
 
 https://prettier.io/docs/en/install.html
