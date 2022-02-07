@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="name" name="movie-name" />
+    <input type="text" placeholder="country" name="movie-country" />
+    <input type="text" placeholder="cast" name="movie-cast" />
+    <input type="date" placeholder="date" name="movie-date" />
+    <button data-role="save-movie">Save</button>
+</body>
+<script>
+    - //catch th button click
+        - //catch the values.
+        //send the values to the server in the right format.
+        $(function () {
+            $('[data-role="save-movie"]').click(() => {
+                const movie = getMovieValues()
+                sendMovieToServer(movie)
+            });
+
+
+            function getMovieValues() {
+                const movieName = $('[name=movie-name]').val();
+                const movieCountry = $('[name=movie-country]').val();
+                const movieDate = $('[name=movie-date]').val();
+                const movieCast = foramtCast($('[name=movie-cast]').val());
+                return { movieName, movieCountry, movieDate, movieCast };
+            }
+
+            function foramtCast(stringCastValue) {
+                return stringCastValue.split(',')
+            }
+
+            function sendMovieToServer(movie) {
+                fetch('movies', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(movie)
+                }).then(response => response.json()).then(movie => console.log(movie)).catch(err => alert(err))
+            }
+        })
+
+</script>
+
+</html>
