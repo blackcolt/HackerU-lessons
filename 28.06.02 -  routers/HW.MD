@@ -35,5 +35,8 @@ Bonus:
 Get all guests and, check if they are over 21 and add canDrink=true as a property to the object.
 Convert your project to TS project(@types/express @types/mognose etc..)
 add a controller with the folowing funcitons:
-
+create a nice 404 html page, if the user gets to any route that you don't have display it to him (app.get('*'))
+add a route, called showMeAll, in this route use axios to call your other route (/guests)
+ (its just to prectice axios) wait for an anwer and return it to the user.
+ 
 Enjoy.
