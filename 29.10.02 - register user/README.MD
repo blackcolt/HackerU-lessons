@@ -1,5 +1,5 @@
 validation (what are the errors?)
-hapi
+joi
 typescript.
 promiss all promiss race
 scrapper.
