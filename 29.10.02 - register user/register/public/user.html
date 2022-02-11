@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" placeholder="username">
+<input type="password" placeholder="password">
+
+<body>
+
+</body>
+<script>
+    $(function () {
+        $.post('/registerUser', {}, function (data) {
+            console.log(data)
+        }).fail(function (err) {
+            if (err.status === 400) {
+                let errorMessage = '';
+                $.each(err.responseJSON.errors, (key, error) => {
+                    errorMessage += error.message
+                })
+                alert(errorMessage)
+            }
+        })
+    });
+</script>
+
+</html>
