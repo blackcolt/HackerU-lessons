@@ -1,10 +1,11 @@
 tests.
 test folders
+test routes.
 test by subjects.
 lets test multiply\devide.
 lets fail our tests.
-TDD
-
+TDD - test deriven development
 promiss all promiss race
 scrapper.
-https://joi.dev/api/?v=17.6.0
+auth middlwere.
+git hooks.
