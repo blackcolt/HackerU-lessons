@@ -4,7 +4,7 @@
 <head>
     <script>
         $('[data-role=btn]').click(function () {
-            userName = $('[data-role=btn]');
+            const userName = $('[data-role=btn]');
             fetch('/apy/user', {
                 'method': 'post',
                 bodi: JSON.parse({ userName })
