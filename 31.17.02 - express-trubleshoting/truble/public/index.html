@@ -2,26 +2,34 @@
 <html lang="en">
 
 <head>
-    <script>
-        $('[data-role=btn]').click(function () {
-            const userName = $('[data-role=btn]');
-            fetch('/apy/user', {
-                'method': 'post',
-                bodi: JSON.parse({ userName })
-            }).then(response => console.log(response)).catch((err) => alert(err))
-        })
-    </script>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <input type="text" data-rola="user" />
-    <button data-rola="btn"></button>
+
 </head>
 
 <body>
+    <input type="text" data-role="user" />
+    <input type="password" data-role="userpassword" />
 
+    <button data-role="btn">Save</button>
+    <script>
+        $('[data-role=btn]').click(function () {
+            const userName = $('[data-role=user]').val();
+            const userpassword = $('[data-role=userpassword]').val();
+            fetch('/api/users', {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'userName': userName,
+                    'password': userpassword
+                },
+                'method': 'POST',
+                body: JSON.stringify({ userName })
+            }).then(response => console.log(response)).catch((err) => alert(err))
+        })
+    </script>
 </body>
 
 </html>
