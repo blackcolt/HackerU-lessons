@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect(':3000');
+        // socket.emit('join', { user: params.name });
+        // socket.on('someone joined', function (user) {
+        //     console.log(user)
+        // });
+    </script>
+</head>
+
+<body>
+    <h1>THE awesome CHAT!</h1>
+    <div>
+        <ul data-role="messages-container"></ul>
+        <input type="text" placeholder="message" data-role="message" />
+        <button data-role="send-button">Send message</button>
+    </div>
+</body>
+<script>
+    // catch click *
+    // catch message *
+    // send via Socket *
+    // clear text fields
+    // poplate ul from data * 
+    $(function () {
+        getOldMessage();
+        $('[data-role="send-button"]').click(() => {
+            const input = $('[data-role="message"]')
+            const message = input.val();
+            socket.emit('message-sent', { message });
+            input.val("");
+            socket.on('message-recived', (message) => { debugger; addMessage(message.messageText, message.createdAt) })
+        })
+
+        function getOldMessage() {
+            $.get('/messages', function (messages) {
+                $.each(messages, function (_, message) {
+                    addMessage(message.messageText, message.createdAt);
+                })
+            })
+        }
+
+        function addMessage(message, date) {
+            $('[data-role="messages-container"]').append(`<li>${message}, ${date}</li>`)
+        }
+    })
+</script>
+
+</html>
