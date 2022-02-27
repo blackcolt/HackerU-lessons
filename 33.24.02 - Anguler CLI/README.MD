@@ -1,0 +1,6 @@
+- What is angular as a freamwork.
+- Who develope angular.
+- Why to use it?
+- Waht is a CLI.
+- What is the angular cli.
+- What is a freamwork (and whats the diffrent between frameork and a package)

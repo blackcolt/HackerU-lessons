@@ -26,11 +26,6 @@
     </div>
 </body>
 <script>
-    // catch click *
-    // catch message *
-    // send via Socket *
-    // clear text fields
-    // poplate ul from data * 
     $(function () {
         getOldMessage();
         $('[data-role="send-button"]').click(() => {
@@ -38,20 +33,33 @@
             const message = input.val();
             socket.emit('message-sent', { message });
             input.val("");
-            socket.on('message-recived', (message) => { debugger; addMessage(message.messageText, message.createdAt) })
         })
 
+        function deleteMessage(messageId) {
+            $(`[data-message-id=${messageId}],
+             [data-button-message-id=${messageId}]`).remove()
+        }
+        socket.on('message-recived', (message) => { addMessage(message.messageText, message.createdAt, message._id) })
+        socket.on('message-deleted', (message) => { deleteMessage(message._id) })
         function getOldMessage() {
             $.get('/messages', function (messages) {
                 $.each(messages, function (_, message) {
-                    addMessage(message.messageText, message.createdAt);
+                    addMessage(message.messageText, message.createdAt, message._id);
                 })
             })
         }
 
-        function addMessage(message, date) {
-            $('[data-role="messages-container"]').append(`<li>${message}, ${date}</li>`)
+        function addMessage(message, date, id) {
+            $('[data-role="messages-container"]').append(`<li data-message-id=${id}>${message}, ${date}</li><button data-button-message-id=${id} data-role="delete-button">DELETE</button>`)
         }
+
+        $("body").on("click", '[data-role=delete-button]', function () {
+            fetch('/message/' + $(this).data('button-message-id'), {
+                method: 'DELETE',
+            })
+            const id = $(this).data('button-message-id')
+            socket.emit('delete-message', { id });
+        });
     })
 </script>
 

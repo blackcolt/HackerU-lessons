@@ -1,4 +1,8 @@
-const { saveMssage, getAllMessages } = require("./contoller/messageController"),
+const {
+    saveMssage,
+    getAllMessages,
+    deleteMessage,
+  } = require("./contoller/messageController"),
   express = require("express"),
   socketIO = require("socket.io"),
   mongoose = require("mongoose"),
@@ -23,6 +27,17 @@ mongoose
           io.emit("message-recived", message);
         });
       });
+      socket.on("delete-message", (id) => {
+        deleteMessage(id).then((message) =>
+          io.emit("message-deleted", message)
+        );
+      });
+    });
+    app.delete("/message/:id", (req, res) => {
+      const messageID = req.params.id;
+      deleteMessage(messageID).then((message) =>
+        io.emit("message-deleted", message)
+      );
     });
   })
   .catch((err) => console.error(err));
