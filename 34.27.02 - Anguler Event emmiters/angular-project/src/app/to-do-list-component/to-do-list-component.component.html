@@ -1,0 +1,5 @@
+<div class="to-list">
+    <app-to-do-item (markDoneInChild)="markDoneInParent($event)" *ngFor="let todo of toDos" [text]="todo.text"
+        [id]="todo.id" [isDone]="todo.isDone">
+    </app-to-do-item>
+</div>

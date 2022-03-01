@@ -1,0 +1,7 @@
+<div>
+    <span *ngIf="!isDone">{{id}}.<p>{{text}}</p>{{date}}</span>
+    <s *ngIf="isDone">{{id}}.<p>{{text}}</p>{{date}}</s>
+    <label>Is done?</label>
+    <input (change)="toggleDoneInChild()" [checked]="isDone" type="checkbox" />
+    <app-to-image image="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-8.webp"></app-to-image>
+</div>
