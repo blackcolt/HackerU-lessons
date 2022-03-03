@@ -7,6 +7,6 @@
   this.evEmitter.emit()
 - in the mother component (that calls the child component) add a function that handle the emitting
   motherHandle(){
-}
+  }
 
 - in the child tag add (evEmitter)=motherHandle
