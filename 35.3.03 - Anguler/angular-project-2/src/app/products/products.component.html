@@ -1,0 +1,6 @@
+{{sucessesMessage}}
+<app-product (productClicked)="productClickedMoshe($event)" *ngFor="let product of products" [price]="product.price"
+    [name]="product.name"></app-product>
+
+<app-contact-us (somethingHappend)="contactClicked()"></app-contact-us>
+<app-presser (limitReached)="onLimitReached($event)"></app-presser>

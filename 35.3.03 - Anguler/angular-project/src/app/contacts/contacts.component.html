@@ -1,0 +1,12 @@
+<app-add-contact></app-add-contact>
+<nb-card size="small">
+    <nb-toggle (change)="toggleChanged($event)" ></nb-toggle>
+    <nb-list>
+        <nb-list-item [style.border-bottom.color]="color" *ngFor="let contact of contacts">
+            <nb-user [name]="contact.name" [title]="contact.phone">
+            </nb-user>
+        </nb-list-item>
+    </nb-list>
+</nb-card>
+
+<!-- <app-contact *ngFor="let contact of contacts" [name]="contact.name" [phone]="contact.phone"></app-contact> -->
