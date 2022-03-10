@@ -3,6 +3,6 @@
  - create an interface for todo with all fields.
  - Add the abbility to add TODO, delete edit to do.
  
- Bonus: Add the ability to order the todo by date 
+ Bonus: Add the ability to order the todo by date
 
  good luck.
