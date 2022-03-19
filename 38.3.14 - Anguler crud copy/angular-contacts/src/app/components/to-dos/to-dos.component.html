@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="search" placeholder="search TODO"><br />
+<button (click)="doSomething()" ></button>
+<label>
+    See Only Done
+    <input type="checkbox" [(ngModel)]="isDone" />
+</label>
+<!-- <app-to-do *ngFor="let toDo of todos | searchToDo:search" [toDo]="toDo"></app-to-do> -->
+
+<app-to-do *ngFor="let toDo of todos | aboveXLetters:search" [toDo]="toDo"></app-to-do>
+
+<!-- <app-to-do *ngFor="let toDo of todos| getDoneToDo:isDone" [toDo]="toDo"></app-to-do> -->

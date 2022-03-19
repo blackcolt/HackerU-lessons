@@ -1,8 +1,7 @@
- - Create an anguler project called "to-do".
- - Add 3 inputs: text, date, isDone
- - create an interface for todo with all fields.
- - Add the abbility to add TODO, delete edit to do.
+ - Please create a movie app.
+ - will have an interface - movie.
+ - Show all movies in a list (of your choice)
+ - Add the abbility to add a movie
+ - Add a pipe for filtering movies by name.
+ - Add a pipe for filtering movies by isNew (suppose to be in the model)
  
- Bonus: Add the ability to order the todo by date
-
- good luck.
