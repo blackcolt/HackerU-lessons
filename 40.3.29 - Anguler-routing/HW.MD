@@ -1,12 +1,14 @@
-- Please create a movie app.
-- will have an interface - movie. (name, actors (list of strings), isNew, date)
-- Will have an interface for an actor.
-- Add 3-6 movies with actors.
-- By using ngClass if the actor is a female mark the row in red, else in blue.
+ - Please create a node application (yes yes, node, you read right.)
+ - Added express logic (with public dir and static like we learnd)
+ - Now, plase create an angular app for a virtual store.
+ - Add product model service and everything.
+ - Add the abbility to add product.
+ - Delete product.
+ - Edit prodcut
+ - Add a pipe for search prodct.
 
-Add a pipe that you can search for a movie by name.
+ - Please buid the app(YOU REMEMBER HOW!).
+ - Using http-server lunch the builded angualr app.
+ - NOW! Copy it to the the the public dir on the npm project
 
-Bunos:
-Add a pipe that you can search for a movie by actor name.
-
-
+ Bunos: Build the project right to the server (use the path option, read about it).
