@@ -11,8 +11,8 @@
 - abstract classes.
 - properties (public, private protected)
 - what is an instance? (מופע)
-
-(singltone - logger thats create a file in the constructor)
+- implements (interface)
+  (singltone - logger thats create a file in the constructor)
 
 - Angular:
 - the diffrent in private, nothing and public in services

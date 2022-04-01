@@ -8,7 +8,11 @@ abstract class Animle {
     makeNoise(): void{}
 }
 
-class Dog extends Animle {
+interface dddd {
+   blabla()
+}
+
+class Dog extends Animle implements dddd {
     override makeNoise(): void {}
 }
 class Cat extends Animle {
