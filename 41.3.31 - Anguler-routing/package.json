@@ -1,0 +1,17 @@
+{
+  "name": "40.3.29---anguler-routing",
+  "version": "1.0.0",
+  "description": "- ng build --prod. (why we don't need ng s in production) - npm i http-server -g - http-server dist - pulifiels - pip testing   design pattrens - the diffrent in private, nothing and public in services - singletone service (business logic). - (noting - only constructor, prvate - all class, public - all + html) - angular router.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
