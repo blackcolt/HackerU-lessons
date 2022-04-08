@@ -13,6 +13,7 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AppRoutingModule } from './app-routing.module';
 import { AddContactComponent } from './add-contact/add-contact.component';
 import { SearchContactComponent } from './search-contact/search-contact.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchContactComponent } from './search-contact/search-contact.componen
     ContactComponent,
     AddContactComponent,
     SearchContactComponent,
-    FilterPipe
+    FilterPipe,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
