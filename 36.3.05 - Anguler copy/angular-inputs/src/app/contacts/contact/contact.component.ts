@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Contact } from '../contact'
+import { ContactService } from '../../services/contact.service'
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -11,5 +13,7 @@ export class ContactComponent{
   @Input() lastname: string = ""
   @Input() phone: string = ""
   @Input() tags: string[] = []
+  constructor(private service: ContactService){
 
+  }
 }
