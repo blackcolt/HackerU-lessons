@@ -1,0 +1,11 @@
+<div>
+    <div *ngIf="isEditMode;else info">
+        <input type="tel" [(ngModel)]="contact.phone" />
+        <input type="text" [(ngModel)]="contact.name" />
+    </div>
+    <ng-template #info>
+        <span>{{contact?.name}}</span>
+        <span>{{contact?.phone}}</span>
+    </ng-template>
+    <button (click)="toggleEditAndSave()">{{isEditMode ? 'save' : 'edit'}}</button>
+</div>
