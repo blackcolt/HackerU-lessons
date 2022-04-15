@@ -1,0 +1,10 @@
+<div class="container">
+    <form action="action_page.php">
+        <label for="fname">שם פרטי</label>
+        <input [(ngModel)]="contact.name" type="text" id="fname" name="firstname" placeholder="שם">
+        <label for="lname">טלפון</label>
+        <input [(ngModel)]="contact.number" type="text" id="lname" name="lastname" placeholder="טלפון">
+        <a [routerLink]="['']">חזרה</a>
+
+    </form>
+</div>

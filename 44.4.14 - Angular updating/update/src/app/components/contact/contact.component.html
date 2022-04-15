@@ -1,0 +1,5 @@
+<div>
+    <p>{{contact.name}} - {{contact.number}} </p>
+    <!-- <a href="/update-contact" {{contact.id}}>ערוך</a> -->
+    <a [routerLink]="['update-contact', contact.id]">ערוך</a>
+</div>
