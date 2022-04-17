@@ -1,0 +1,6 @@
+<div>
+    <p>{{contact | temp }}</p>
+    <p>{{contact.phone}}</p>
+    <p>{{contact.dateOfBirth}}</p>
+    <a [routerLink]="['update-contact', contact.id]">Edit</a>
+</div>
