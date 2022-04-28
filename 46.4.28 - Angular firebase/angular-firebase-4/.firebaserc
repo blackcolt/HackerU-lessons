@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hacker-u-lesson": {
+      "hosting": {
+        "angular-firebase-4": [
+          "idan-was-here-and-it-was-good"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hacker-u-lesson"
+  }
+}

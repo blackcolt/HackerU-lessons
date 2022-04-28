@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hacker-sonia": {
+      "hosting": {
+        "angular-firebase-3": [
+          "hacker-sonia"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hacker-sonia"
+  }
+}
