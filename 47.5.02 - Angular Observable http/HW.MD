@@ -22,6 +22,10 @@ please add a page for edit a billboard message.
 
 *keep in mind the REST API Standart (for the routes.)*
 
+Bounos: 
+please create a small node server that return some data from the DB and add a caching mechnizem to it (using any cache library that you find)
+
+
 please read this article:
 Client cache with angular
 https://dev.to/mauro_codes/client-side-caching-with-angular-2i6l
