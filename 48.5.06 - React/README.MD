@@ -86,10 +86,3 @@ lets try to add class (not className) to the JSX
 destruct property from state to get easier access
 
 break the html to small pieces of jsx in the same component (return jsx from a function)
-
-what is yarn (npm vs yarn)
-
-smart component (with state) and stupid component (wihtout)
-we will have something that will determine the state.
-
-use the state obj (reserved word)
