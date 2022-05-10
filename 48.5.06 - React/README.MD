@@ -31,8 +31,6 @@ npm i -g create-react-app
 
 create-react-app project-name
 
-what is yarn (npm vs yarn)
-
 bubble js (pre compile) transform our JSX to js code (in the JS write the html).
 https://babeljs.io/repl
 let element = <span className="this-is-class">hi you</span> ) there is no ""\''\`` if you notice.
@@ -62,9 +60,9 @@ imrc
 
 the component its just a function (can be a class but function is batter) that returns JSX code (like html)
 
-component needs to be upper cased at the begining (for it to be diffrent from reguller html tags)
+component needs to be _upper cased_ at the begining (for it to be diffrent from reguller html tags)
 
-**there is no need to use class component anynmore accourding to facebook**
+**there is no need to use class component anynmore accourding to facebook (idan lost a meal becuse of it)**
 
 component can return **only** one father element
 wrong:
@@ -83,12 +81,7 @@ OK:
 
 we can use <React.Fragment> to avoid a div
 
-smart component (with state) and stupid component (wihtout)
-we will have something that will determine the state.
-
 lets try to add class (not className) to the JSX
-
-use the state obj (reserved word)
 
 destruct property from state to get easier access
 
