@@ -1,0 +1,17 @@
+[
+  {
+    "name": "idan",
+    "lname": "magled",
+    "age": 35
+  },
+  {
+    "name": "dor",
+    "lname": "nimrod",
+    "age": 32
+  },
+  {
+    "name": "nimrod",
+    "lname": "dor",
+    "age": 32
+  }
+]
