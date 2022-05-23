@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "ronaldo",
+    "team": "MU",
+    "number": 7,
+    "position": "ST",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cristiano_Ronaldo_2018.jpg"
+  },
+  {
+    "id": 1,
+    "name": "messi",
+    "team": "PSG",
+    "number": 30,
+    "position": "ST",
+    "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR_BSXPlBjoBeJruSaCamv7kQuMNjoIIWX0CITXUVoapFCbRM9g"
+  },
+  {
+    "id": 2,
+    "name": "zlatan",
+    "team": "milan",
+    "number": 18,
+    "position": "ST",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/09/Zlatan_Ibrahimovi%C4%87_June_2018.jpg"
+  }
+]
