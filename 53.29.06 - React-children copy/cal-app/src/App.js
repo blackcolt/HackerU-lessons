@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
+      <h1>this will always be here</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="month">
