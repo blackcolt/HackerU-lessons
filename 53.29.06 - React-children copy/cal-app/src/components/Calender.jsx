@@ -5,7 +5,7 @@ function Calender(props) {
   const { monts } = props;
   return (
     <Container>
-      {chunk(4, monts).map((chunk, index) => {
+      {chunk(3, monts).map((chunk, index) => {
         return (
           <Row key={index}>
             {chunk.map((month) => {
