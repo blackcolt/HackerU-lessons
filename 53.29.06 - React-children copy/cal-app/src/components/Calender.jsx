@@ -1,10 +1,20 @@
 import Month from "./Month";
-import { Container, Row } from "react-bootstrap/";
+import { Button, Container, Row } from "react-bootstrap/";
+import { useState, setState } from "react";
 
 function Calender(props) {
   const { monts } = props;
+  const { isRed, setIsRed } = useState(false);
+  const { counter, setCounter } = useState(0);
+
+  const handleClick = () => {
+    setCounter(counter++);
+    setIsRed(true);
+  };
+
   return (
     <Container>
+      <Button onClick={handleClick} />
       {chunk(3, monts).map((chunk, index) => {
         return (
           <Row key={index}>
