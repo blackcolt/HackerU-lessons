@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/blackcolt/HackerU-lessons/issues"
   },
-  "homepage": "https://github.com/blackcolt/HackerU-lessons#readme"
+  "homepage": "https://github.com/blackcolt/HackerU-lessons#readme",
+  "dependencies": {
+    "react-router-dom": "^6.3.0"
+  }
 }
