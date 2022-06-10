@@ -19,5 +19,6 @@
   "homepage": "https://github.com/blackcolt/HackerU-lessons#readme",
   "dependencies": {
     "react-router-dom": "^6.3.0"
-  }
+  },
+  "devDependencies": {}
 }
