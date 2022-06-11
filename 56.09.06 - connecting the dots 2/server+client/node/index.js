@@ -1,10 +1,9 @@
-const apiRoutes = require("./routes/api"),
-  express = require("express"),
+const express = require("express"),
   path = require("path"),
   app = express(),
   port = 3000;
 
-app.use("/api", (req) => res.status(201).json({ message: "Hello World!" }));
+app.use("/api", require("./routes/api"));
 
 app.use(express.static("client/build"));
 
