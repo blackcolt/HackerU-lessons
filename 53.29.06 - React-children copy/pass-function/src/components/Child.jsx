@@ -5,13 +5,13 @@ function Child(props) {
   const [counter, setCounter] = useState(0);
   const [isOn, setOn] = useState(false);
   const handleClick = () => {
-    setState({ isOn: true, counter: 20 });
-    // let count = counter;
-    // count++;
+    // setState({ isOn: true, counter: 20 });
+    let count = counter;
+    count++;
     // if (click && typeof click === "function") {
     //   click();
     // }
-    // setCounter(count);
+    setCounter(count);
   };
   return (
     <div>
