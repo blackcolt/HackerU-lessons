@@ -6,16 +6,12 @@ https://www.ebay.com
 
 - The app is going to scrape a sites, and add its title to the DB.
   create a model called site
-  create a model called scraped_entities
 
 Site
 
 - siteName
 - siteUrl
 
-scraped_entities:
-
-- title, site id (refrence to the site)
 
 We gonna add to each one of them model, controller, route.
 
