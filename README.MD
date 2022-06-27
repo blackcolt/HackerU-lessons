@@ -8,7 +8,7 @@ Go to this URL and download git client.
 https://git-scm.com/download/win
 
 **Remeber to check this checkbox in the instllation:**
-
+ 
 ![Alt text](/images/6KElW.png?raw=true "Git checkbox")
 
 ## Mac:

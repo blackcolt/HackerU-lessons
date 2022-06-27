@@ -13,7 +13,7 @@ Add the needed code in the package json (you can check prettier docs)
 models:
 
 guest,
-name:string,gender:string, dateOfBirth:date, isVip: bool,
+name:string, gender:string, dateOfBirth:date, isVip: bool,
 reservation
 room_id (assoc with room), capacity:number
 room
