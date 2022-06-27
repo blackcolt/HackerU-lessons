@@ -1,0 +1,31 @@
+[
+    {
+        "user_name": "idan",
+        "password": "1234",
+        "phone": "0526651266",
+        "email": "idanmagled@gmail.com",
+        "user_data": {
+            "age": 25,
+            "is_admin": false
+        }
+    },
+    {
+        "user_name": "elad",
+        "password": "5050",
+        "email": "eladtheman@gmail.com",
+        "phone": "0526657766",
+        "user_data": {
+            "age": 60,
+            "is_admin": true
+        }
+    },
+    {
+        "user_name": "elad",
+        "password": "5050",
+        "email": "eladtheman@gmail.com",
+        "phone": "0526657766",
+        "user_data": {
+            "is_admin": true
+        }
+    }
+]

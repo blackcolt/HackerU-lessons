@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect(':3000');
+        // socket.emit('join', { user: params.name });
+        // socket.on('someone joined', function (user) {
+        //     console.log(user)
+        // });
+    </script>
+</head>
+
+<body>
+    <h1>THE awesome CHAT!</h1>
+    <div>
+        <ul data-role="messages-container"></ul>
+        <input type="text" placeholder="message" data-role="message" />
+        <button data-role="send-button">Send message</button>
+    </div>
+</body>
+<script>
+    $(function () {
+        getOldMessage();
+        $('[data-role="send-button"]').click(() => {
+            const input = $('[data-role="message"]')
+            const message = input.val();
+            socket.emit('message-sent', { message });
+            input.val("");
+        })
+
+        function deleteMessage(messageId) {
+            $(`[data-message-id=${messageId}],
+             [data-button-message-id=${messageId}]`).remove()
+        }
+        socket.on('message-recived', (message) => { addMessage(message.messageText, message.createdAt, message._id) })
+        socket.on('message-deleted', (message) => { deleteMessage(message._id) })
+        function getOldMessage() {
+            $.get('/messages', function (messages) {
+                $.each(messages, function (_, message) {
+                    addMessage(message.messageText, message.createdAt, message._id);
+                })
+            })
+        }
+
+        function addMessage(message, date, id) {
+            $('[data-role="messages-container"]').append(`<li data-message-id=${id}>${message}, ${date}</li><button data-button-message-id=${id} data-role="delete-button">DELETE</button>`)
+        }
+
+        $("body").on("click", '[data-role=delete-button]', function () {
+            fetch('/message/' + $(this).data('button-message-id'), {
+                method: 'DELETE',
+            })
+            const id = $(this).data('button-message-id')
+            socket.emit('delete-message', { id });
+        });
+    })
+</script>
+
+</html>

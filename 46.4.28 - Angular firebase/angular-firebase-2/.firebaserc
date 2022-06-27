@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "hacker-u-lesson"
+  },
+  "targets": {
+    "hacker-u-lesson": {
+      "hosting": {
+        "angular-firebase-2": [
+          "hacker-u-lesson"
+        ]
+      }
+    }
+  }
+}

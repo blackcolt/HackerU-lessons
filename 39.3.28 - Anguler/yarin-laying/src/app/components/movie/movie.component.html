@@ -1,0 +1,11 @@
+<div>
+    <p>name:{{movie?.name}}</p>
+    <p>category: {{movie?.category}}</p>
+    <p>isNew: {{movie?.isNew}}</p>
+    <p>date: {{movie?.date}}</p>
+    <hr />
+    <h1>Actors</h1>
+    <app-actors-container [actores]="movie?.actors"></app-actors-container>
+    <hr />
+</div>
+<hr />

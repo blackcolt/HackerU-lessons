@@ -1,0 +1,9 @@
+[
+  {
+    "name": "this is the best product",
+    "price": 150,
+    "description": "this is the description foe the best product",
+    "isInStuck": true,
+    "category": "feshion"
+  }
+]

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="delete">
+        KILL USER
+    </button>
+</body>
+<script>
+$(function(){
+    console.log()
+    $("#delete").click(function(){
+        const id= "61eef280983cec6eaf3b1ead"
+        // fetch('http://localhost:3000/user/' + id, {method: 'DELETE'})
+        // .then(res => res.json()) // or res.json()
+        // .then(jsn => console.log(jsn))
+
+        $.ajax({
+            
+            url: 'http://localhost:3000/user/' + id,
+            type: 'DELETE', //=method
+            success: function(result) {
+                con
+            }
+        });
+    })
+})
+</script>
+</html>

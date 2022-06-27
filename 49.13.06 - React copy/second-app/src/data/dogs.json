@@ -1,0 +1,16 @@
+[
+  {
+    "dog name": "vanil",
+    "age": 70,
+    "have tail": "true",
+    "bla bla": "11111",
+    "make sount": "true"
+  },
+  {
+    "dog name": "chepe",
+    "age": 7,
+    "have tail": "true",
+    "bla bla": "55555",
+    "make sount": "false"
+  }
+]

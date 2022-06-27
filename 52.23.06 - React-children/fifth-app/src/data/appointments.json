@@ -1,0 +1,50 @@
+[
+  {
+    "id": 0,
+    "title": "The best meeting there is",
+    "date": "Mon May 23 2022 18:27:13 GMT+0300 (Israel Daylight Time)",
+    "description": "this is description",
+    "attendcies": [
+      {
+        "id": 1,
+        "name": "idan",
+        "image": "https://avatars.githubusercontent.com/u/5114310?v=4"
+      },
+      {
+        "id": 2,
+        "name": "yarin2222",
+        "image": "https://avatars.githubusercontent.com/u/89860312?v=4"
+      },
+      {
+        "id": 3,
+        "name": "dor",
+        "image": "https://avatars.githubusercontent.com/u/94069382?v=4"
+      }
+    ],
+    "location": { "lat": 10.14, "long": 44.43 }
+  },
+  {
+    "id": 1,
+    "title": "The second best meeting there is",
+    "date": "Mon May 23 2022 14:27:13 GMT+0300 (Israel Daylight Time)",
+    "description": "this is description2",
+    "attendcies": [
+      {
+        "id": 0,
+        "name": "idan1",
+        "image": "https://avatars.githubusercontent.com/u/5114310?v=4"
+      },
+      {
+        "id": 1,
+        "name": "yarin1",
+        "image": "https://avatars.githubusercontent.com/u/89860312?v=4"
+      },
+      {
+        "id": 2,
+        "name": "dor1",
+        "image": "https://avatars.githubusercontent.com/u/94069382?v=4"
+      }
+    ],
+    "location": { "lat": 10.14, "long": 44.43 }
+  }
+]

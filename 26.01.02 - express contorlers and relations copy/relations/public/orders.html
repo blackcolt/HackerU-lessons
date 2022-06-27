@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order manager</title>
+</head>
+<body dir="rtl">
+    <label>לקוח
+    <select data-role="client">
+        <option disabled="disabled" >loading data</option>
+    </select>
+</label>
+<label>חנות
+    <select data-role="store">
+        <option disabled="disabled" >loading data</option>
+    </select>
+</label>
+<input type="text" data-role="orderText" placeholder="הזמנה"/>
+<button data-role="send-order">הוסף הזמנה</button>
+
+<h1>ORDERS</h1>
+<ul data-role="orders">
+    
+</ul>
+</body>
+<script>
+    $(function() {
+        $.get('/getAllClients',(response)=>{
+            const select = $('[data-role="client"]');
+            populateOptions(select, response.clients);
+        });
+        
+        $.get('/getAllStores',(response)=>{
+            const select = $('[data-role="store"]');
+            populateOptions(select, response.stores);
+        });
+
+        function getAllOrders(){
+            $.get('/orders', function(response){
+                const orderLlist = $('[data-role="orders"]')
+                orderLlist.html('');
+                $.each(response.orders, (_, order)=>{
+                    const item = $('<li>');
+                    if(order.client.isVip == "true") {
+                        item.css('font-weight', 'bold');
+                    }
+                    item.text(order.orderText + "(" + order.client.name + ")")
+                    orderLlist.append(item);
+                })
+            })
+        }
+
+        function populateOptions(selectElement, itratable){
+            selectElement.html('');
+            $.each(itratable, function(_ ,itrate){
+                const option = $('<option>');
+                option.text(itrate.name);
+                option.attr('value', itrate._id);
+                selectElement.append(option);
+            })
+        }
+
+        $("[data-role=send-order]").click(()=>{
+           const orderText = $('[data-role=orderText]').val()
+            clientId = $('[data-role="client"]').val(),
+             storeId = $('[data-role="store"]').val();
+             $.post('/order', { orderText, clientId, storeId }, (response)=>{
+               if (response.error) {
+                   let text = '';
+                   $.each(response.error.errors, (index, error)=>{
+                       if (error.message){
+                        text+=error.message
+                       }
+                   })
+                   alert(text);
+               }
+             })
+            
+        });
+    getAllOrders()
+    });
+</script>
+</html>

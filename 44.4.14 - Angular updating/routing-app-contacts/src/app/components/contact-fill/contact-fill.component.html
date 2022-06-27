@@ -1,0 +1,23 @@
+<div>
+    <label>
+        name:
+        <input [(ngModel)]="contact.name" type="text" placeholder="name" />
+    </label>
+    <label>
+        nickname:
+        <input [(ngModel)]="contact.nickname" type="text" placeholder="nickname" />
+    </label>
+    <label>
+        phone:
+        <input [(ngModel)]="contact.phone" type="tel" placeholder="phone" />
+    </label>
+    <label>
+        date:
+        <input [(ngModel)]="contact.dateOfBirth" type="date" placeholder="date" />
+    </label>
+    <label>
+        like cold?:
+        <input type="checkbox" [(ngModel)]="contact.isLikeCold" />
+    </label>
+    <a [routerLink]="['']">חזרה</a>
+</div>

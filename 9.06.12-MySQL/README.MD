@@ -1,0 +1,7 @@
+ - What is Database. (google sheet example)
+ - DB -> Table -> Record\Row -> field
+ - Why we have to use DB.
+ - Which types have DB we have. (retional and non retional)
+ - Primery key.
+ - Connections - one to many -> one to one ->many to many
+ - Install xamp.

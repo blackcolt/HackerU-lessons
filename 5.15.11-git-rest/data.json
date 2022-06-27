@@ -1,0 +1,36 @@
+This is a problem, do not put comments in a json file.
+
+GET - posts/1/comments
+GET - posts
+GET - posts/2
+
+POST - posts/ CREATE
+PUT - posts/1 EDIT THE ALL OBJECT
+PATCH - posts/1 EDIT SPECIFIC KEY
+DELETE - posts/1 DELETE THIS POST.
+
+[
+    {
+        "id": 1,
+        "post": "this is sparta!!!",
+        "data": "today",
+        "comments": [
+                {
+                    "id":1,
+                    "name": "idan b",
+                    "comment": ""
+                }
+        ]
+    },
+    {
+        "id": 2,
+        "post": "this is not sparta!!!",
+        "comments": [
+                {
+                    "id":1,
+                    "name": "idan b",
+                    "comment": ""
+                }
+        ]
+    }
+]

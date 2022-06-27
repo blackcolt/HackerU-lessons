@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-APP</title>
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script>
+        const socket = io.connect(':3000'); //1
+        socket.emit('join', { user: 'idan' });
+        socket.on('someone joined', function (user) {
+            console.log(user)
+        });
+    </script>
+</head>
+
+<body>
+    <label>
+        TO DO
+        <input data-role="todo" type="text" placeholder="TODO" />
+        <button data-role="add-todo">Add</button>
+    </label>
+    <div data-role="to-do-list-container">
+        <ol data-role="to-do-list">
+
+        </ol>
+    </div>
+</body>
+<script>
+    socket.on('to do added', function (toDo) {
+        $('[data-role="to-do-list"]').append(`<li>${toDo.todo}</li>`)
+    })
+    $('[data-role="add-todo"]').click(function () {
+        const todo = $('[data-role="todo"]').val();
+        socket.emit('add to do', { todo });//3
+    });
+</script>
+
+</html>

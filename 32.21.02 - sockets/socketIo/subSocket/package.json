@@ -1,0 +1,21 @@
+{
+  "name": "subsocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  },
+  "dependencies": {
+    "mongoose": "6.2.2",
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,7 @@
+<p *ngIf="(actor?.name?.split(' ') ?? []).length <= 2; else short">{{index +
+    1}}.{{actor?.name}}</p>
+<ng-template #short>
+    <span [ngClass]="moreThenThreeClass">{{index + 1}}.{{actor?.name}}</span>
+</ng-template>
+<p>{{actor?.date}}</p>
+<p>{{actor?.nickname | upperactor}}</p>

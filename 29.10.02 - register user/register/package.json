@@ -1,0 +1,21 @@
+{
+  "name": "register",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx nodemon node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "4.17.2",
+    "joi": "^17.6.0",
+    "mongoose": "6.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.15"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,7 @@
+<img src="images/prev.png">
+<input #name nbInput placeholder="please name" />
+<input #age nbInput placeholder="please tagez" />
+<input #tz nbInput placeholder="please tz" />
+<input #check type="checkbox" name="" />
+<button (click)="btnClicked(name.value, age.value, tz.value, check.checked)" nbButton>Click me</button>
+<app-contacts></app-contacts>
