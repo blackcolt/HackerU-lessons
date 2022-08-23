@@ -1,0 +1,2 @@
+8:36:47 PM: {"from":"I Car blog","userName":"user 1","cookies":"XDEBUG_SESSION=XDEBUG_ECLIPSE; PHPSESSID=6qlv235tusjdui2qfdr0msm3fm"} 
+8:51:42 PM: {"from":"I Car blog","userName":"user 1","cookies":"XDEBUG_SESSION=XDEBUG_ECLIPSE; PHPSESSID=6qlv235tusjdui2qfdr0msm3fm"} 
