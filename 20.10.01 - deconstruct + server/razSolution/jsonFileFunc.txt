@@ -1,0 +1,24 @@
+function createJsonTempData() {
+  let busTimes = [];
+  for (let i = 0; i < 200; i++) {
+    let temp = {};
+    let hour = Math.floor(Math.random() * 24);
+    let minutes = Math.floor(Math.random() * 50 + 10);
+    temp.kav = Math.ceil(Math.random() * 100 + 100);
+    temp.time = `${hour}:${minutes}`;
+    busTimes.push(temp);
+  }
+  console.log(busTimes);
+  return busTimes;
+}
+
+async function writeJson() {
+  let data = createJsonTempData();
+  try {
+    await fs.writeJson("./bus-times.json", data);
+    console.log("success!");
+  } catch (err) {
+    console.error(err);
+  }
+}
+writeJson();
